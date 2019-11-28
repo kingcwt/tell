@@ -58,9 +58,8 @@ body,html{
     display: flex;
     align-items: center;
     height: 1rem;
-    position: relative;
 }
-.one .p2 .a{
+.one .p2 audio{
     width: 4.5rem;
     position: absolute;
     top: 50%;
