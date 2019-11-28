@@ -43,7 +43,7 @@
     <div class="one">
         <h3>来电语音</h3>
         <p class="py ">
-            <audio class="a" src="18911363799.mp3"  controls >
+            <audio id="aud" class="a" src="18911363799.mp3"  controls >
             </audio>
 
         </p>
@@ -62,8 +62,25 @@
 </body>
 </html>
 <script>
+    date = new Date();
+    var date = new Date();
+    var seperator1 = "-";
+    var seperator2 = ":";
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+        + " " + date.getHours() + seperator2 + date.getMinutes()
+        + seperator2 + date.getSeconds();
 
-    t=setTimeout(time,1000);
+    document.getElementById('d').innerHTML=(currentdate);
+
+    // t=setTimeout(time,1000);
    function time() {
        date = new Date();
        var date = new Date();
@@ -82,11 +99,22 @@
            + seperator2 + date.getSeconds();
 
        document.getElementById('d').innerHTML=(currentdate);
-       t=setTimeout(time,1000)
+       // t=setTimeout(time,1000)
    }
    var l =document.getElementById('la');
    var f=document.getElementById('f');
    l.onclick=function () {
       f.style.display='none'
    }
+</script>
+<script>
+    var aud =document.getElementById('aud');
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    if(isiOS){
+       aud.style.marginBottom='1rem';
+    }
+    if(isAndroid){
+    }
 </script>
