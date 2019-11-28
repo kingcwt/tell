@@ -60,10 +60,10 @@ body,html{
     height: 1rem;
 }
 .one .p2 audio{
-    width: 4.5rem;
-    position: absolute;
-    top: 50%;
-    margin-top: -.2rem;
+    /*width: 4.5rem;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*margin-top: -.2rem;*/
 }
 .footer{
     position: fixed;
