@@ -59,12 +59,12 @@ body,html{
     align-items: center;
     height: 1rem;
 }
-.one .p2 audio{
-    /*width: 4.5rem;*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*margin-top: -.2rem;*/
+.one .py{
+    display: flex;
+    align-items: center;
+    height: 1rem;
 }
+
 .footer{
     position: fixed;
     bottom: 0;
