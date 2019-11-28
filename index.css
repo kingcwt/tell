@@ -1,0 +1,90 @@
+body,html,header,main,div,span,p,li,h5,h3,h4,h6{
+    margin: 0;
+    padding: 0;
+}
+a{
+    border: 0;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+body,html{
+    background: #f6f6f8;
+}
+.header{
+    height: 5rem;
+    background:#2963f4 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header .outbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: .35rem;
+    margin-top: .5rem;
+}
+.outbox .pimg{
+    width: 2rem;
+}
+.outbox .pimg img{
+    width: 100%;
+}
+.outbox .tel{
+    margin-top: .19rem;
+}
+
+.main{
+    margin-top:.2rem;
+}
+.main .one{
+    font-size: .4rem;
+    background: #fff;
+    padding: .1rem .2rem;
+    box-sizing: border-box;
+    margin-bottom: .2rem;
+}
+.one h3{
+    padding: .2rem 0;
+    border-bottom: .02rem solid #f6f6f8;
+    color: #575a64;;
+}
+.one .p2{
+    padding: .2rem 0;
+    display: flex;
+    align-items: center;
+}
+.one .p2 audio{
+    width: 4.5rem;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 1.55rem;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.footer p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    font-size: .38rem;
+}
+.footer p span{
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p span img{width: 100%}

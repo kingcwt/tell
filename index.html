@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>来电显示</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (clientWidth < 320) {
+                    docEl.style.fontSize = 50 + 'px'
+                } else if (clientWidth > 750) {
+                    docEl.style.fontSize = 100 + 'px'
+                } else {
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+</script>
+<body>
+<header class="header">
+    <div class="outbox">
+        <p class="pimg"><img src="hf.png" alt=""></p>
+        <p class="tel">18911363799</p>
+        <!--18911363799-->
+    </div>
+</header>
+<main class="main">
+    <div class="one">
+        <h3>来电信息</h3>
+        <p class="p2">
+            <span>来电时间：</span>
+            <span id="d"></span>
+        </p>
+    </div>
+    <div class="one">
+        <h3>来电语音</h3>
+        <p class="p2">
+            <audio src="18911363799.mp3" controls></audio>
+        </p>
+    </div>
+    <div class="one">
+        <h3>来电语音转文字</h3>
+        <p class="p2">
+
+        </p>
+    </div>
+    <div class="footer">
+        <a href="tel:18911363799"><p><span><img src="b1.png" alt=""></span><span>回拨</span></p></a>
+        <a href=""><p><span><img src="b2.png" alt=""></span><span>拉黑</span></p></a>
+    </div>
+</main>
+</body>
+</html>
+<script>
+
+    t=setTimeout(time,1000);
+   function time() {
+       date = new Date();
+       var date = new Date();
+       var seperator1 = "-";
+       var seperator2 = ":";
+       var month = date.getMonth() + 1;
+       var strDate = date.getDate();
+       if (month >= 1 && month <= 9) {
+           month = "0" + month;
+       }
+       if (strDate >= 0 && strDate <= 9) {
+           strDate = "0" + strDate;
+       }
+       var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+           + " " + date.getHours() + seperator2 + date.getMinutes()
+           + seperator2 + date.getSeconds();
+
+       document.getElementById('d').innerHTML=(currentdate);
+       t=setTimeout(time,1000)
+   }
+</script>
