@@ -91,4 +91,12 @@ body,html{
     justify-content: center;
     align-items: center;
 }
+.one .py audio{
+    margin-bottom: 1rem;
+}
 .footer p span img{width: 100%}
+@media (max-width: 750px) {
+   .one .py audio{
+       margin-bottom: 1rem;
+   }
+}
