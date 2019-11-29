@@ -108,5 +108,10 @@ body{
     height: 1rem;
 }
 .one .yy{
-    height: .12rem;
+    height: auto;
+    padding: .25rem .2rem;
+}
+.one .yy .l{
+    display: contents;
+    color: #1cabfd;
 }
